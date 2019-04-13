@@ -1,0 +1,16 @@
+{
+  "name": "reviseviewcount",
+  "version": "1.0.0",
+  "description": "恢复访问数",
+  "main": "reviseViewCount.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "leancloud-storage": "^3.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "leotiann@gmail.com",
+  "license": "ISC"
+}
