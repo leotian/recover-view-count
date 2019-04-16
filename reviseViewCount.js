@@ -23,10 +23,20 @@ list.forEach((filename) => {
   const query = new AV.Query('Counter');
   query.equalTo('title', postTitle)
 
-  // 留下times最多的一个 修改url 并删除其他脏数据
-  query.find().then((result) => {
-    console.log(results)
-    // result.set('url', `/posts/${filename}/`)
-    // result.save()
+  // 留下times最多的一个 修改url 并修改其他脏数据url
+  query.find().then((results) => {
+    let maxResult = results[0]
+    results.forEach((result) => {
+      if(result.attributes.time > maxResult.attributes.time) maxResult = result
+    })
+    maxResult.set('url', `/posts/${filename}/`)
+    maxResult.save()
+    console.log(maxResult)
+    results.forEach((result) => {
+      if(result.attributes.url === maxResult.attributes.url && result.id !== maxResult.id) {
+        result.set('url', `/posts/${filename}`)
+        result.save()
+      }
+    })
   });
 })
