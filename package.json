@@ -2,8 +2,9 @@
   "name": "reviseviewcount",
   "version": "1.0.0",
   "description": "恢复访问数",
-  "main": "reviseViewCount.js",
+  "main": "revise.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.3",
     "leancloud-storage": "^3.12.0"
   },
