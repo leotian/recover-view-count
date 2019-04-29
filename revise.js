@@ -6,11 +6,12 @@ AV.init({
   appKey: 'MomkTz6Tq1aBGWvzNDSv8o31'
 })
 
-// 通过本地目录获取
+// 通过本地目录获取 设置成 hexo目录的 public/posts 地址
 // const postDir = '/Users/tyb/workspace/blog/public/posts'
 // const postList = getPostsByDir(postDir)
 
 // 通过爬虫获取文章标题和链接
+// hexo站点链接 本地可以用 hexo server 启动 设置成 http://localhost:4000
 const domain = 'https://leotian.cn'
 const postList = getPostsByReptile(domain)
 
