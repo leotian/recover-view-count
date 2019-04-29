@@ -1,4 +1,4 @@
-const AV = require('leancloud-storage')
+const AV = require('leancloud-storage/storage')
 const { getPostsByDir, getPostsByReptile } = require('./posts')
 
 AV.init({

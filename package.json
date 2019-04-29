@@ -2,7 +2,7 @@
   "name": "reviseviewcount",
   "version": "1.0.0",
   "description": "恢复访问数",
-  "main": "revise.js",
+  "main": "src/revise.js",
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.3",

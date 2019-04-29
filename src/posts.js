@@ -1,5 +1,5 @@
 const fs = require('fs')
-const axios = require('axios')
+const axios = require('axios/index')
 const cheerio = require('cheerio')
 
 const getPostList = ($) => {
